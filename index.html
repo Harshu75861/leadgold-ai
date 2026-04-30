@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LeadGold AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="background-glow" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="LeadGold AI home">
+        <span class="brand-mark">LG</span>
+        <span>LeadGold AI</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#generator">Generator</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="generator">
+        <div class="hero-copy">
+          <p class="eyebrow">AI lead generation suite</p>
+          <h1>Get High-Quality Leads Instantly</h1>
+          <p class="hero-text">
+            Generate sample prospects with polished outreach messages and sales
+            pitches for your target niche in seconds.
+          </p>
+        </div>
+
+        <section class="generator-panel" aria-label="Lead generator">
+          <form id="leadForm" class="lead-form">
+            <label>
+              <span>Enter niche/business type</span>
+              <input
+                id="niche"
+                name="niche"
+                type="text"
+                placeholder="e.g. luxury real estate agents"
+                autocomplete="organization"
+                required
+              />
+            </label>
+
+            <label>
+              <span>Enter location</span>
+              <input
+                id="location"
+                name="location"
+                type="text"
+                placeholder="e.g. Mumbai"
+                autocomplete="address-level2"
+                required
+              />
+            </label>
+
+            <button class="gold-button" type="submit">
+              <span>Generate Leads</span>
+            </button>
+          </form>
+
+          <div class="status-bar" id="statusBar" hidden>
+            <span class="spinner" aria-hidden="true"></span>
+            <span id="statusText">Crafting premium leads...</span>
+          </div>
+        </section>
+      </section>
+
+      <section class="results-section" aria-labelledby="resultsTitle">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Export-ready pipeline</p>
+            <h2 id="resultsTitle">Generated Leads</h2>
+          </div>
+          <button class="outline-button" id="downloadCsv" type="button" disabled>
+            Download CSV
+          </button>
+        </div>
+
+        <div class="table-shell">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Website</th>
+                <th>Message</th>
+              </tr>
+            </thead>
+            <tbody id="resultsBody">
+              <tr class="empty-row">
+                <td colspan="4">Enter a niche and location to generate leads.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="pricing-section" id="pricing" aria-labelledby="pricingTitle">
+        <div class="section-heading centered">
+          <div>
+            <p class="eyebrow">Simple pricing</p>
+            <h2 id="pricingTitle">Choose Your Lead Engine</h2>
+          </div>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="price-card">
+            <p class="plan-name">Free</p>
+            <h3>5 leads</h3>
+            <p>Explore LeadGold AI with instant demo prospecting.</p>
+          </article>
+
+          <article class="price-card featured">
+            <p class="plan-name">Pro</p>
+            <h3>₹499 <span>for 100 leads</span></h3>
+            <p>Scale targeted outreach with AI-written messages and CSV exports.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact">
+      <p>Contact: hello@leadgold.ai</p>
+      <p>WhatsApp: +91 98765 43210</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
